@@ -133,14 +133,24 @@ main {
             font-size: 4rem;
         }
 
-
-
         &::after {
             content: '\200B'; /* Character for the cursor */
             height: 100%;
-            width: 2.5rem;
+            width: 1rem;
             background-color: var(--color-beige-dark);
             animation: blinking 1s steps(1) infinite;
+        }
+
+        @media (min-width: 560px) {
+            &::after {
+                width: 1.5rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            &::after {
+                width: 2.5rem;
+            }
         }
     }
 
